@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/olahol/redisio.png)](https://travis-ci.org/olahol/redisio)
+
 # redisio
 
 Painlessly read and write the Redis protocol in go.

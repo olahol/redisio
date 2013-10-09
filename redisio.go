@@ -79,7 +79,8 @@ func (rd *Reader) ReadRequest() (argv []string, err error) {
 }
 
 // ReadReply reads a Redis reply and returns a triple with the first
-// element being what type the reply has (Status, Error, Integer or Bulk.)
+// element being what type the reply has
+// (Status, Error, Integer, Bulk or MultiBulk.)
 func (rd *Reader) ReadReply() (t string, reply []string, err error) {
 	c, err := rd.r.ReadByte()
 
