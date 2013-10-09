@@ -116,8 +116,8 @@ func (rd *Reader) ReadReply() (t string, reply []string, err error) {
 
 		return "Bulk", []string{string(bs)}, err
 	case '*':
-        argv, err := rd.ReadRequest()
-        return "MultiBulk", argv, err
+		argv, err := rd.ReadRequest()
+		return "MultiBulk", argv, err
 	default:
 		return "", nil, errors.New("unknown reply type")
 	}
@@ -167,7 +167,7 @@ func (rd *Writer) WriteMultiBulk(argv []string) (err error) {
 
 // Flush writes buffered data to the underlying io.Writer.
 func (rd *Writer) Flush() error {
-    return rd.w.Flush()
+	return rd.w.Flush()
 }
 
 func (rd *Writer) writeReply(prefix byte, s string) (err error) {

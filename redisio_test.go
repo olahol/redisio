@@ -23,7 +23,7 @@ func TestRequest(t *testing.T) {
 
 		rd1 := NewWriter(temp)
 		err = rd1.WriteRequest(request)
-        rd1.Flush()
+		rd1.Flush()
 
 		if err != nil {
 			return false
@@ -74,7 +74,7 @@ func TestReplyBulk(t *testing.T) {
 
 		rd1 := NewWriter(temp)
 		err = rd1.WriteBulk(bulk)
-        rd1.Flush()
+		rd1.Flush()
 
 		if err != nil {
 			return false
