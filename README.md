@@ -23,7 +23,9 @@ import (
 func main() {
   rd := redisio.NewWriter(os.Stdout)
 
-  rd.WriteRequest([]string{"GET", "KEY"})
+  rd.WriteRequest([]string{"SET", "KEY", "VALUE"})
+
+  rd.Flush()
 }
 ```
 
